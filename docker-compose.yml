@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  oracle:
+    image: sath89/oracle-12c
+    hostname: oracle
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+      - "8080:8080"
+    volumes:
+      - ./share/:/home/oracle/share/:ro
