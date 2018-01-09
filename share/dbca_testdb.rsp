@@ -6,8 +6,8 @@
 RESPONSEFILE_VERSION = "12.1.0"
 
 [CREATEDATABASE]
-GDBNAME = "testdb"
-SID = "testdb"
+GDBNAME = "TESTDB"
+SID = "TESTDB"
 TEMPLATENAME = "General_Purpose.dbc"
 SYSPASSWORD = "oracle"
 SYSTEMPASSWORD = "oracle"
@@ -18,9 +18,9 @@ EMEXPRESSPORT = "5500"
 CHARACTERSET = "AL32UTF8"
 NATIONALCHARACTERSET = "AL16UTF16"
 
-INITPARAMS = "db_create_file_dest='/u01/app/oracle/oradata'"
+INITPARAMS = "db_create_file_dest=/u01/app/oracle/oradata"
 
 TOTALMEMORY = "1024"
 
 [DELETEDATABASE]
-SOURCEDB = "testdb"
+SOURCEDB = "TESTDB"
