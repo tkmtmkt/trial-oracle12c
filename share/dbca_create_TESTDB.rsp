@@ -15,12 +15,12 @@ SYSTEMPASSWORD = "oracle"
 EMCONFIGURATION = "DBEXPRESS"
 EMEXPRESSPORT = "5500"
 
-DATAFILEDESTINATION = "/u01/app/oracle/oradata"
+DATAFILEDESTINATION = "/data/oradata"
 RECOVERYAREADESTINATION= "/u01/app/oracle/flash_recovery_area"
 
 CHARACTERSET = "AL32UTF8"
 NATIONALCHARACTERSET = "AL16UTF16"
 
-INITPARAMS = "db_create_file_dest=/u01/app/oracle/oradata"
+INITPARAMS = "db_create_file_dest=/data/oradata,db_recovery_file_dest=/data/fast_recovery_area,db_recovery_file_dest_size=2048"
 
 TOTALMEMORY = "1024"
