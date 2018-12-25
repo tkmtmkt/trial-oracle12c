@@ -1,12 +1,17 @@
 version: '2'
 
 services:
-  oracle:
+  db1:
     image: sath89/oracle-12c
-    hostname: oracle
+    hostname: db1
     ports:
-      - "1521:1521"
-      - "5500:5500"
-      - "8080:8080"
+      - "5501:8080"
     volumes:
-      - ./share/:/home/oracle/share/:ro
+      - ./db1/share/:/home/oracle/share/:ro
+  db2:
+    image: sath89/oracle-12c
+    hostname: db2
+    ports:
+      - "5502:8080"
+    volumes:
+      - ./db2/share/:/home/oracle/share/:ro
