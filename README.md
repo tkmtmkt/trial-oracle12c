@@ -16,11 +16,11 @@ $ ./exec.sh
 データベース作成
 
 ```sh
-$ ~/share/dbca_createdb.sh
+$ ~/assets/dbca_createdb.sh
 ```
 
 データベース削除
 
 ```sh
-$ ~/share/dbca_deletedb.sh
+$ ~/assets/dbca_deletedb.sh
 ```

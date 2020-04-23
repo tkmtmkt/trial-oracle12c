@@ -1,12 +1,20 @@
 version: '2'
-
 services:
-  oracle:
-    image: sath89/oracle-12c
+  db:
+    image: oracle/database:12.2.0.1-se2
     hostname: oracle
     ports:
       - "1521:1521"
       - "5500:5500"
       - "8080:8080"
     volumes:
-      - ./share/:/home/oracle/share/:ro
+      - "./db/opt/oracle/oradata/:/opt/oracle/oradata/:rw"
+      - "./db/opt/oracle/fast_recovery_area/:/opt/oracle/fast_recovery_area/:rw"
+      - "./db/opt/toolbox/:/opt/toolbox/:rw"
+      - "./db/home/oracle/assets/:/home/oracle/assets/:rw"
+      - "~/.dotfiles/:/hoem/oracle/.dotfiles/:rw"
+    environment:
+      - ORACLE_SID=ORACDB
+      - ORACLE_PDB=ORAPDB
+      - ORACLE_PWD=P@ssw0rd
+      - ORACLE_CHARACTERSET=AL32UTF8
