@@ -1,18 +1,36 @@
 version: '2'
 services:
-  db:
-    image: oracle/database:12.2.0.1-se2
-    hostname: oracle
+  db1:
+    image: oracle/database:12.2.0.1-ee
+    hostname: db1
     ports:
-      - "1521:1521"
-      - "5500:5500"
-      - "8080:8080"
+      - "11521:1521"
+      - "15500:5500"
+      - "18080:8080"
     volumes:
-      - "./db/opt/oracle/oradata/:/opt/oracle/oradata/:rw"
-      - "./db/opt/oracle/fast_recovery_area/:/opt/oracle/fast_recovery_area/:rw"
-      - "./db/opt/toolbox/:/opt/toolbox/:rw"
-      - "./db/home/oracle/assets/:/home/oracle/assets/:rw"
-      - "~/.dotfiles/:/hoem/oracle/.dotfiles/:rw"
+      - "./common/home/oracle/assets/:/home/oracle/assets/:rw"
+      - "./common/opt/dotfiles/:/opt/dotfiles/:ro"
+      - "./common/opt/toolbox/:/opt/toolbox/:ro"
+      - "./db1/opt/oracle/oradata/:/opt/oracle/oradata/:rw"
+      - "./db1/opt/oracle/fast_recovery_area/:/opt/oracle/fast_recovery_area/:rw"
+    environment:
+      - ORACLE_SID=ORACDB
+      - ORACLE_PDB=ORAPDB
+      - ORACLE_PWD=P@ssw0rd
+      - ORACLE_CHARACTERSET=AL32UTF8
+  db2:
+    image: oracle/database:12.2.0.1-ee
+    hostname: db2
+    ports:
+      - "21521:1521"
+      - "25500:5500"
+      - "28080:8080"
+    volumes:
+      - "./common/home/oracle/assets/:/home/oracle/assets/:rw"
+      - "./common/opt/dotfiles/:/opt/dotfiles/:ro"
+      - "./common/opt/toolbox/:/opt/toolbox/:ro"
+      - "./db2/opt/oracle/oradata/:/opt/oracle/oradata/:rw"
+      - "./db2/opt/oracle/fast_recovery_area/:/opt/oracle/fast_recovery_area/:rw"
     environment:
       - ORACLE_SID=ORACDB
       - ORACLE_PDB=ORAPDB
