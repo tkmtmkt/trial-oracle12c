@@ -4,7 +4,7 @@ ORACDB1=
     (CONNECT_DATA =
       (SERVER = DEDICATED)
       (SERVICE_NAME = ORACDB1)
-      (UR=A)
+      (UR = A)
     )
   )
 
@@ -14,6 +14,6 @@ ORACDB2=
     (CONNECT_DATA =
       (SERVER = DEDICATED)
       (SERVICE_NAME = ORACDB2)
-      (UR=A)
+      (UR = A)
     )
   )

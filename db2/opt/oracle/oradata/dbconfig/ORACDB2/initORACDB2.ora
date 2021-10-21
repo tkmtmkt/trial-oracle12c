@@ -1,0 +1,37 @@
+ORACDB2.__data_transfer_cache_size=0
+ORACDB2.__db_cache_size=1124073472
+ORACDB2.__inmemory_ext_roarea=0
+ORACDB2.__inmemory_ext_rwarea=0
+ORACDB2.__java_pool_size=16777216
+ORACDB2.__large_pool_size=33554432
+ORACDB2.__oracle_base='/opt/oracle'#ORACLE_BASE set from environment
+ORACDB2.__pga_aggregate_target=536870912
+ORACDB2.__sga_target=1610612736
+ORACDB2.__shared_io_pool_size=83886080
+ORACDB2.__shared_pool_size=335544320
+ORACDB2.__streams_pool_size=0
+*.audit_file_dest='/opt/oracle/admin/ORACDB2/adump'
+*.audit_sys_operations=false
+*.audit_trail='none'
+*.compatible='12.2.0'
+*.control_files='/opt/oracle/oradata/ORACDB2/control01.ctl'
+*.db_block_size=8192
+*.db_name='ORACDB2'
+*.db_recovery_file_dest='/opt/oracle/fast_recovery_area'
+*.db_recovery_file_dest_size=2147483648
+*.db_unique_name='ORACDB2'
+*.diagnostic_dest='/opt/oracle'
+*.dispatchers='(PROTOCOL=TCP) (SERVICE=ORACDB2XDB)'
+*.enable_pluggable_database=true
+*.fal_server='ORACDB1'
+*.log_archive_config='DG_CONFIG=(ORACDB2,ORACDB1)'
+*.log_archive_dest_1='LOCATION=USE_DB_RECOVERY_FILE_DEST VALID_FOR=(ALL_LOGFILES,ALL_ROLES) DB_UNIQUE_NAME=ORACDB2'
+*.log_archive_dest_2='SERVICE=ORACDB1 ASYNC VALID_FOR=(ONLINE_LOGFILES,PRIMARY_ROLE) DB_UNIQUE_NAME=ORACDB1'
+*.nls_language='AMERICAN'
+*.nls_territory='AMERICA'
+*.open_cursors=300
+*.pga_aggregate_target=512m
+*.processes=320
+*.remote_login_passwordfile='EXCLUSIVE'
+*.sga_target=1536m
+*.undo_tablespace='UNDOTBS1'
