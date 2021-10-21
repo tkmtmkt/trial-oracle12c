@@ -15,7 +15,7 @@ services:
       - "./db1/opt/oracle/fast_recovery_area/:/opt/oracle/fast_recovery_area/:rw"
     environment:
       - ORACLE_SID=ORACDB1
-      - ORACLE_PDB=ORAPDB1
+      - ORACLE_PDB=ORAPDB
       - ORACLE_PWD=P%ssw0rd
       - ORACLE_CHARACTERSET=AL32UTF8
       - ENABLE_ARCHIVELOG=true
@@ -34,7 +34,7 @@ services:
       - "./db2/opt/oracle/fast_recovery_area/:/opt/oracle/fast_recovery_area/:rw"
     environment:
       - ORACLE_SID=ORACDB2
-      - ORACLE_PDB=ORAPDB2
+      - ORACLE_PDB=ORAPDB
       - ORACLE_PWD=P%ssw0rd
       - ORACLE_CHARACTERSET=AL32UTF8
       - ENABLE_ARCHIVELOG=true
