@@ -1,0 +1,19 @@
+ORACDB1=
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = db1)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ORACDB1)
+      (UR=A)
+    )
+  )
+
+ORACDB2=
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = db2)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = ORACDB2)
+      (UR=A)
+    )
+  )
