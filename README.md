@@ -1,4 +1,4 @@
-study-oracle12c
+trail-oracle12c
 ===============
 
 ディレクトリ初期化
